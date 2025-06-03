@@ -17,6 +17,7 @@ export default [
     ],
     plugins: [
       css(), vue(), peerDepsExternal()
-    ]
+    ],
+    external: ['primevue']
   }
 ]
