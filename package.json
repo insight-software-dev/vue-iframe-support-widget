@@ -20,7 +20,8 @@
   },
   "homepage": "https://github.com/insight-software-dev/vue-iframe-support-widget#readme",
   "peerDependencies": {
-    "vue": "^3.2.21"
+    "vue": "^3.2.21",
+    "primevue": "^3.51.0"
   },
   "devDependencies": {
     "rollup": "^4.41.1",
@@ -30,8 +31,5 @@
   },
   "scripts": {
     "build": "rollup -c"
-  },
-  "dependencies": {
-    "primevue": "^3.51.0"
   }
 }

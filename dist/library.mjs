@@ -1,5 +1,5 @@
 import { SpeedDial, Card, Button } from 'primevue';
-import { resolveComponent, createElementBlock, openBlock, createVNode, createBlock, createCommentVNode, normalizeClass, withCtx, createElementVNode } from 'vue';
+import { resolveComponent, createElementBlock, openBlock, createVNode, createBlock, createCommentVNode, withCtx, createElementVNode } from 'vue';
 
 var script = {
   name: 'SupportWidget',
@@ -67,8 +67,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       direction: "up",
       showIcon: "pi pi-question",
       style: {"position":"fixed","bottom":"2rem","right":"2rem"},
-      class: normalizeClass($props.buttonClass)
-    }, null, 8 /* PROPS */, ["model", "class"]),
+      class: "p-button-secondary"
+    }, null, 8 /* PROPS */, ["model"]),
     (!$data.hideSupportCard)
       ? (openBlock(), createBlock(_component_Card, {
           key: 0,
@@ -76,13 +76,13 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         }, {
           content: withCtx(() => [
             createElementVNode("iframe", {
-              class: normalizeClass($props.iframeClass),
+              class: "clickup-embed clickup-dynamic-height",
               src: $props.supportFormUrl,
               onwheel: "",
               width: "100%",
               height: "850px",
               style: {"background":"transparent","border":"1px solid #ccc"}
-            }, null, 10 /* CLASS, PROPS */, _hoisted_1)
+            }, null, 8 /* PROPS */, _hoisted_1)
           ]),
           footer: withCtx(() => [
             createElementVNode("div", _hoisted_2, [
@@ -90,8 +90,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
                 label: "Close",
                 icon: "pi pi-times",
                 onClick: _cache[0] || (_cache[0] = $event => ($data.hideSupportCard = true)),
-                class: normalizeClass($props.buttonClass)
-              }, null, 8 /* PROPS */, ["class"])
+                class: "p-button-secondary"
+              })
             ])
           ]),
           _: 1 /* STABLE */
