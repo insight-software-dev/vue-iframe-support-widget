@@ -5,12 +5,12 @@
         direction="up"
         showIcon="pi pi-question"
         style="position: fixed; bottom: 2rem; right: 2rem;"
-        :class="buttonClass"
+        class="p-button-secondary"
     />
     <Card v-if="!hideSupportCard" class="embed-card">
       <template #content>
         <iframe
-            :class="iframeClass"
+            class="clickup-embed clickup-dynamic-height"
             :src="supportFormUrl"
             onwheel=""
             width="100%"
@@ -24,7 +24,7 @@
               label="Close"
               icon="pi pi-times"
               @click="hideSupportCard = true"
-              :class="buttonClass"
+              class="p-button-secondary"
           />
         </div>
       </template>
