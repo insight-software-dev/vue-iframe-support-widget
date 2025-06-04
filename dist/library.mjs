@@ -1,4 +1,3 @@
-import { SpeedDial, Card, Button } from 'primevue';
 import { resolveComponent, createElementBlock, openBlock, createVNode, createBlock, createCommentVNode, withCtx, createElementVNode } from 'vue';
 
 var script = {

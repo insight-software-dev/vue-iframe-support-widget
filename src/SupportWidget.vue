@@ -33,7 +33,6 @@
 </template>
 
 <script>
-import {Button, Card, SpeedDial} from "primevue";
 export default {
   name: 'SupportWidget',
   components: {
