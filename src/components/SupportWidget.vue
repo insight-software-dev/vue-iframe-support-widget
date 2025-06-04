@@ -5,9 +5,8 @@
         direction="up"
         showIcon="pi pi-question"
         style="position: fixed; bottom: 2rem; right: 2rem;"
-        class="p-button-secondary"
     />
-    <Card v-if="!hideSupportCard" class="embed-card">
+    <Card v-if="!hideSupportCard" class="clickup-embed-card">
       <template #content>
         <iframe
             class="clickup-embed clickup-dynamic-height"
@@ -24,7 +23,6 @@
               label="Close"
               icon="pi pi-times"
               @click="hideSupportCard = true"
-              class="p-button-secondary"
           />
         </div>
       </template>
@@ -33,13 +31,9 @@
 </template>
 
 <script>
-import {Button, Card, SpeedDial} from "primevue";
 export default {
   name: 'SupportWidget',
   components: {
-    Button,
-    Card,
-    SpeedDial
   },
   props: {
     supportFormUrl: {
@@ -47,12 +41,6 @@ export default {
     },
     documentationUrl: {
       type: String
-    },
-    buttonClass: {
-      type: String
-    },
-    iframeClass: {
-      type: String,
     }
   },
   data() {
@@ -87,22 +75,37 @@ export default {
 }
 </script>
 
+
 <style scoped>
-.embed-card {
+.clickup-embed-card {
   position: fixed;
   top: 50%;
   left: 50%;
   z-index: 2000;
   transform: translate(-50%, -50%);
   border: 1px solid #ccc;
-  width: 40vw !important;
-  height: 75vh !important;
-  box-shadow: 0 4px 32px rgba(0,0,0,0.25);
-  border-radius: 8px;
+  width: 40vw;
+  height: 75vh;
+  box-shadow: 0 4px 32px #00000040;
+  border-radius: 8px
 }
 
-@media screen and (max-width: 640px) {
-  .embed-card {
+.p-card .p-card-footer {
+  gap: 0 !important;
+  padding-top: 0 !important
+}
+
+.p-speeddial-action {
+  text-decoration: none !important;
+}
+
+.p-speeddial-button.p-button.p-button-icon-only {
+  width: 3rem !important;
+  height: 3rem !important;
+}
+
+@media screen and (max-width: 800px) {
+  .clickup-embed-card {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -114,19 +117,14 @@ export default {
     box-shadow: 0 4px 32px rgba(0,0,0,0.25);
     border-radius: 8px;
   }
-}
 
-.p-card .p-card-footer {
-  gap: 0 !important;
-  padding-top: 0 !important;
-}
+  .clickup-dynamic-height {
+    height: 650px !important;
+  }
 
-.p-speeddial-action {
-  text-decoration: none;
-}
+  .p-card .p-card-body {
+    gap: 0 !important;
+  }
 
-.p-speeddial-button.p-button.p-button-icon-only {
-    width: 3rem;
-    height: 3rem;
 }
 </style>
