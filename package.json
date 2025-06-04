@@ -2,7 +2,7 @@
   "name": "vue-iframe-support-widget",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
+  "main": "dist/library.js",
   "module": "dist/library.mjs",
   "files": [
     "dist/*"
