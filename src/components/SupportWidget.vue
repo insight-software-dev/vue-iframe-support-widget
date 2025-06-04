@@ -34,9 +34,6 @@
 export default {
   name: 'SupportWidget',
   components: {
-    // SpeedDial: () => import('primevue/speeddial'),
-    // Card: () => import('primevue/card'),
-    // Button: () => import('primevue/button')
   },
   props: {
     supportFormUrl: {
