@@ -1,13 +1,14 @@
 'use strict';
 
+var primevue = require('primevue');
 var vue = require('vue');
 
 var script = {
   name: 'SupportWidget',
   components: {
-    Button,
-    Card,
-    SpeedDial
+    Button: primevue.Button,
+    Card: primevue.Card,
+    SpeedDial: primevue.SpeedDial
   },
   props: {
     supportFormUrl: {
