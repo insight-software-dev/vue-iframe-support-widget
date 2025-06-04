@@ -1,35 +1,35 @@
 {
   "name": "vue-iframe-support-widget",
-  "version": "1.0.0",
-  "description": "",
-  "main": "dist/library.js",
-  "module": "dist/library.mjs",
-  "files": [
-    "dist/*"
-  ],
+  "version": "0.0.4",
   "type": "module",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/insight-software-dev/vue-iframe-support-widget.git"
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/vue-iframe-support-widget.umd.cjs",
+  "module": "./dist/vue-iframe-support-widget.js",
+  "exports": {
+    ".": {
+      "import": "./dist/vue-iframe-support-widget.js",
+      "require": "./dist/vue-iframe-support-widget.umd.cjs"
+    },
+    "./style.css": "./dist/style.css"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/insight-software-dev/vue-iframe-support-widget/issues"
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && vue-tsc --emitDeclarationOnly",
+    "types": "vue-tsc ",
+    "preview": "vite preview"
   },
-  "homepage": "https://github.com/insight-software-dev/vue-iframe-support-widget#readme",
   "peerDependencies": {
-    "vue": "^3.2.21",
-    "primevue": "^3.51.0"
+    "primevue": "^3.51.0",
+    "vue": "^3.2.47"
   },
   "devDependencies": {
-    "rollup": "^4.41.1",
-    "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-vue": "^6.0.0",
-    "rollup-plugin-css-only": "^4.5.2"
-  },
-  "scripts": {
-    "build": "rollup -c"
+    "@types/node": "^20.2.5",
+    "@vitejs/plugin-vue": "^5.1.4",
+    "typescript": "^5.6.2",
+    "vite": "^5.4.10",
+    "vue-tsc": "2.0.29"
   }
 }
