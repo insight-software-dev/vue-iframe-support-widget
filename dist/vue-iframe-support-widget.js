@@ -1,5 +1,5 @@
-import { resolveComponent as r, createElementBlock as _, openBlock as c, createVNode as i, createBlock as h, createCommentVNode as f, withCtx as s, createElementVNode as l } from "vue";
-const k = (n, e) => {
+import { resolveComponent as r, createElementBlock as _, openBlock as c, createVNode as i, createBlock as h, createCommentVNode as k, withCtx as s, createElementVNode as l } from "vue";
+const f = (n, e) => {
   const t = n.__vccOpts || n;
   for (const [p, o] of e)
     t[p] = o;
@@ -54,7 +54,7 @@ function g(n, e, t, p, o, d) {
       showIcon: "pi pi-question",
       style: { position: "fixed", bottom: "2rem", right: "2rem" }
     }, null, 8, ["model"]),
-    o.hideSupportCard ? f("", !0) : (c(), h(u, {
+    o.hideSupportCard ? k("", !0) : (c(), h(u, {
       key: 0,
       class: "clickup-embed-card"
     }, {
@@ -81,7 +81,7 @@ function g(n, e, t, p, o, d) {
     }))
   ]);
 }
-const v = /* @__PURE__ */ k(C, [["render", g], ["__scopeId", "data-v-e24592fe"]]);
+const v = /* @__PURE__ */ f(C, [["render", g], ["__scopeId", "data-v-d605e36e"]]);
 export {
   v as SupportWidget
 };

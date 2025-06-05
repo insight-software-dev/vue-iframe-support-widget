@@ -125,6 +125,11 @@ export default {
   .clickup-dynamic-height {
     height: 650px !important;
   }
+}
 
+@media screen and (max-width: 400px) {
+  .clickup-dynamic-height {
+    height: 400px !important;
+  }
 }
 </style>
