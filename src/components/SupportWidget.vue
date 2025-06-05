@@ -6,6 +6,7 @@
         showIcon="pi pi-question"
         class="speed-dial-style"
         button-class="button-size"
+        style="position: fixed; bottom: 2rem; right: 2rem;"
     />
     <Card v-if="!hideSupportCard" class="clickup-embed-card">
       <template #content>

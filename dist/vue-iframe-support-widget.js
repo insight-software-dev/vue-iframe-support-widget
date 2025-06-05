@@ -1,5 +1,5 @@
-import { resolveComponent as r, createElementBlock as _, openBlock as p, createVNode as i, createBlock as h, createCommentVNode as k, withCtx as s, createElementVNode as l } from "vue";
-const f = (n, e) => {
+import { resolveComponent as r, createElementBlock as _, openBlock as i, createVNode as p, createBlock as h, createCommentVNode as f, withCtx as s, createElementVNode as l } from "vue";
+const k = (n, e) => {
   const t = n.__vccOpts || n;
   for (const [c, o] of e)
     t[c] = o;
@@ -47,15 +47,16 @@ const f = (n, e) => {
 }, C = ["src"], S = { class: "flex justify-content-end gap-0" };
 function g(n, e, t, c, o, d) {
   const a = r("SpeedDial"), u = r("Button"), m = r("Card");
-  return p(), _("div", null, [
-    i(a, {
+  return i(), _("div", null, [
+    p(a, {
       model: d.helpItems,
       direction: "up",
       showIcon: "pi pi-question",
       class: "speed-dial-style",
-      "button-class": "button-size"
+      "button-class": "button-size",
+      style: { position: "fixed", bottom: "2rem", right: "2rem" }
     }, null, 8, ["model"]),
-    o.hideSupportCard ? k("", !0) : (p(), h(m, {
+    o.hideSupportCard ? f("", !0) : (i(), h(m, {
       key: 0,
       class: "clickup-embed-card"
     }, {
@@ -71,7 +72,7 @@ function g(n, e, t, c, o, d) {
       ]),
       footer: s(() => [
         l("div", S, [
-          i(u, {
+          p(u, {
             label: "Close",
             icon: "pi pi-times",
             onClick: e[0] || (e[0] = (y) => o.hideSupportCard = !0)
@@ -82,7 +83,7 @@ function g(n, e, t, c, o, d) {
     }))
   ]);
 }
-const x = /* @__PURE__ */ f(b, [["render", g], ["__scopeId", "data-v-69a98f10"]]);
+const v = /* @__PURE__ */ k(b, [["render", g], ["__scopeId", "data-v-f998e8f9"]]);
 export {
-  x as SupportWidget
+  v as SupportWidget
 };
