@@ -110,9 +110,9 @@ export default {
 }
 
 .speed-dial-style {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
+  position: fixed !important;
+  bottom: 2rem !important;
+  right: 2rem !important;
 }
 
 @media screen and (max-width: 800px) {
@@ -145,9 +145,9 @@ export default {
   }
 
   .speed-dial-style {
-    position: fixed;
-    bottom: 2.25rem;
-    right: 1rem;
+    position: fixed !important;
+    bottom: 2.25rem !important;
+    right: 1rem !important;
   }
 }
 </style>

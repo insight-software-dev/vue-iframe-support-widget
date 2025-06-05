@@ -82,7 +82,7 @@ function g(n, e, t, c, o, d) {
     }))
   ]);
 }
-const x = /* @__PURE__ */ f(b, [["render", g], ["__scopeId", "data-v-9a4285a7"]]);
+const x = /* @__PURE__ */ f(b, [["render", g], ["__scopeId", "data-v-69a98f10"]]);
 export {
   x as SupportWidget
 };
