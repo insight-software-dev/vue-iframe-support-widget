@@ -6,11 +6,7 @@ const k = (n, e) => {
   return t;
 }, b = {
   name: "SupportWidget",
-  components: {
-    // SpeedDial: () => import('primevue/speeddial'),
-    // Card: () => import('primevue/card'),
-    // Button: () => import('primevue/button')
-  },
+  components: {},
   props: {
     supportFormUrl: {
       type: String
@@ -48,17 +44,19 @@ const k = (n, e) => {
       ];
     }
   }
-}, C = ["src"], S = { class: "flex justify-content-end" };
+}, C = ["src"], S = { class: "flex justify-content-end gap-0" };
 function g(n, e, t, c, o, d) {
-  const a = r("SpeedDial"), m = r("Button"), u = r("Card");
+  const a = r("SpeedDial"), u = r("Button"), m = r("Card");
   return i(), _("div", null, [
     p(a, {
       model: d.helpItems,
       direction: "up",
       showIcon: "pi pi-question",
+      class: "speed-dial-style",
+      "button-class": "button-size",
       style: { position: "fixed", bottom: "2rem", right: "2rem" }
     }, null, 8, ["model"]),
-    o.hideSupportCard ? f("", !0) : (i(), h(u, {
+    o.hideSupportCard ? f("", !0) : (i(), h(m, {
       key: 0,
       class: "clickup-embed-card"
     }, {
@@ -74,7 +72,7 @@ function g(n, e, t, c, o, d) {
       ]),
       footer: s(() => [
         l("div", S, [
-          p(m, {
+          p(u, {
             label: "Close",
             icon: "pi pi-times",
             onClick: e[0] || (e[0] = (y) => o.hideSupportCard = !0)
@@ -85,7 +83,7 @@ function g(n, e, t, c, o, d) {
     }))
   ]);
 }
-const v = /* @__PURE__ */ k(b, [["render", g], ["__scopeId", "data-v-6aff4b7e"]]);
+const v = /* @__PURE__ */ k(b, [["render", g], ["__scopeId", "data-v-f998e8f9"]]);
 export {
   v as SupportWidget
 };

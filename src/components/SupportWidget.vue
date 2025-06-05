@@ -4,6 +4,8 @@
         :model="helpItems"
         direction="up"
         showIcon="pi pi-question"
+        class="speed-dial-style"
+        button-class="button-size"
         style="position: fixed; bottom: 2rem; right: 2rem;"
     />
     <Card v-if="!hideSupportCard" class="clickup-embed-card">
@@ -18,7 +20,7 @@
         ></iframe>
       </template>
       <template #footer>
-        <div class="flex justify-content-end">
+        <div class="flex justify-content-end gap-0">
           <Button
               label="Close"
               icon="pi pi-times"
@@ -84,10 +86,14 @@ export default {
   z-index: 2000;
   transform: translate(-50%, -50%);
   border: 1px solid #ccc;
-  width: 40vw !important;
-  height: 75vh !important;
+  width: 40vw;
+  height: 75vh;
   box-shadow: 0 4px 32px #00000040;
   border-radius: 8px
+}
+
+.p-card .p-card-body {
+  gap: 0 !important;
 }
 
 .p-card .p-card-footer {
@@ -99,12 +105,18 @@ export default {
   text-decoration: none !important;
 }
 
-.p-speeddial-button.p-button.p-button-icon-only {
+.button-size {
   width: 3rem !important;
   height: 3rem !important;
 }
 
-@media screen and (max-width: 640px) {
+.speed-dial-style {
+  position: fixed !important;
+  bottom: 2rem !important;
+  right: 2rem !important;
+}
+
+@media screen and (max-width: 800px) {
   .clickup-embed-card {
     position: fixed;
     top: 50%;
@@ -116,6 +128,27 @@ export default {
     height: 75vh !important;
     box-shadow: 0 4px 32px rgba(0,0,0,0.25);
     border-radius: 8px;
+  }
+
+  .clickup-dynamic-height {
+    height: 650px !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .clickup-dynamic-height {
+    height: 400px !important;
+  }
+
+  .button-size {
+    width: 3.25rem !important;
+    height: 3.25rem !important;
+  }
+
+  .speed-dial-style {
+    position: fixed !important;
+    bottom: 2.25rem !important;
+    right: 1rem !important;
   }
 }
 </style>
