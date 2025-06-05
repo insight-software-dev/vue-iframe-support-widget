@@ -4,7 +4,8 @@
         :model="helpItems"
         direction="up"
         showIcon="pi pi-question"
-        style="position: fixed; bottom: 2rem; right: 2rem;"
+        class="speed-dial-style"
+        button-class="button-size"
     />
     <Card v-if="!hideSupportCard" class="clickup-embed-card">
       <template #content>
@@ -103,9 +104,15 @@ export default {
   text-decoration: none !important;
 }
 
-.p-speeddial-button.p-button.p-button-icon-only {
+.button-size {
   width: 3rem !important;
   height: 3rem !important;
+}
+
+.speed-dial-style {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
 }
 
 @media screen and (max-width: 800px) {
@@ -130,6 +137,17 @@ export default {
 @media screen and (max-width: 400px) {
   .clickup-dynamic-height {
     height: 400px !important;
+  }
+
+  .button-size {
+    width: 3.25rem !important;
+    height: 3.25rem !important;
+  }
+
+  .speed-dial-style {
+    position: fixed;
+    bottom: 2.25rem;
+    right: 1rem;
   }
 }
 </style>
