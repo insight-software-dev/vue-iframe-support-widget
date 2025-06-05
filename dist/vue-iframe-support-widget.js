@@ -1,10 +1,10 @@
-import { resolveComponent as r, createElementBlock as _, openBlock as i, createVNode as p, createBlock as h, createCommentVNode as k, withCtx as s, createElementVNode as l } from "vue";
-const f = (n, e) => {
+import { resolveComponent as r, createElementBlock as _, openBlock as c, createVNode as i, createBlock as h, createCommentVNode as f, withCtx as s, createElementVNode as l } from "vue";
+const k = (n, e) => {
   const t = n.__vccOpts || n;
-  for (const [c, o] of e)
-    t[c] = o;
+  for (const [p, o] of e)
+    t[p] = o;
   return t;
-}, b = {
+}, C = {
   name: "SupportWidget",
   components: {},
   props: {
@@ -44,17 +44,17 @@ const f = (n, e) => {
       ];
     }
   }
-}, C = ["src"], S = { class: "flex justify-content-end" };
-function g(n, e, t, c, o, d) {
+}, S = ["src"], b = { class: "flex justify-content-end gap-0" };
+function g(n, e, t, p, o, d) {
   const a = r("SpeedDial"), m = r("Button"), u = r("Card");
-  return i(), _("div", null, [
-    p(a, {
+  return c(), _("div", null, [
+    i(a, {
       model: d.helpItems,
       direction: "up",
       showIcon: "pi pi-question",
       style: { position: "fixed", bottom: "2rem", right: "2rem" }
     }, null, 8, ["model"]),
-    o.hideSupportCard ? k("", !0) : (i(), h(u, {
+    o.hideSupportCard ? f("", !0) : (c(), h(u, {
       key: 0,
       class: "clickup-embed-card"
     }, {
@@ -66,11 +66,11 @@ function g(n, e, t, c, o, d) {
           width: "100%",
           height: "850px",
           style: { background: "transparent", border: "1px solid #ccc" }
-        }, null, 8, C)
+        }, null, 8, S)
       ]),
       footer: s(() => [
-        l("div", S, [
-          p(m, {
+        l("div", b, [
+          i(m, {
             label: "Close",
             icon: "pi pi-times",
             onClick: e[0] || (e[0] = (y) => o.hideSupportCard = !0)
@@ -81,7 +81,7 @@ function g(n, e, t, c, o, d) {
     }))
   ]);
 }
-const v = /* @__PURE__ */ f(b, [["render", g], ["__scopeId", "data-v-a4b4a764"]]);
+const v = /* @__PURE__ */ k(C, [["render", g], ["__scopeId", "data-v-e24592fe"]]);
 export {
   v as SupportWidget
 };

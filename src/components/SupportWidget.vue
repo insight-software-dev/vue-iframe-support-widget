@@ -18,7 +18,7 @@
         ></iframe>
       </template>
       <template #footer>
-        <div class="flex justify-content-end">
+        <div class="flex justify-content-end gap-0">
           <Button
               label="Close"
               icon="pi pi-times"
@@ -90,6 +90,10 @@ export default {
   border-radius: 8px
 }
 
+.p-card .p-card-body {
+  gap: 0 !important;
+}
+
 .p-card .p-card-footer {
   gap: 0 !important;
   padding-top: 0 !important
@@ -120,10 +124,6 @@ export default {
 
   .clickup-dynamic-height {
     height: 650px !important;
-  }
-
-  .p-card .p-card-body {
-    gap: 0 !important;
   }
 
 }
